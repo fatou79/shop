@@ -37,7 +37,27 @@
 
 	<div class="container">
 		<H1>Heading</H1>
-		Body of the Page
+		<div>
+Your Todos are
+<ol>
+<c:forEach items="${todos}" var="todo">
+    
+    	<li>${todo.name}  &nbsp;  ${todo.category} &nbsp;
+    	  <a href="/delete-todo.do?todo=${todo.name}  &nbsp; catego =${todo.category} ">Delete</a></li>
+</c:forEach>
+</ol>
+
+
+<form method="POST" action="/todo.do">
+New Todo : <input name="todo" type="text" />
+New category: <input name="catego" type="text"/>
+
+
+ <input name="add" type="submit" />
+</form>
+
+</div>
+		
 	</div>
 
 	<footer class="footer">
