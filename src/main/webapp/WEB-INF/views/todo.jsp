@@ -30,13 +30,13 @@
 		</ul>
 
 		<ul class="nav navbar-nav navbar-right">
-			<li><a href="/login.do">Login</a></li>
+			<li><a href="/logout.do">Logout</a></li>
 		</ul>
 
 	</nav>
 
 	<div class="container">
-		<H1>Heading</H1>
+		<H1>Welcome ${name}</H1>
 		<div>
 Your Todos are
 <ol>
@@ -48,7 +48,7 @@ Your Todos are
 </ol>
 
 
-<form method="POST" action="/todo.do">
+<form method="POST" action="/add-todo.do">
 New Todo : <input name="todo" type="text" />
 New category: <input name="catego" type="text"/>
 

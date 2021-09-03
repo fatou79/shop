@@ -12,20 +12,18 @@ import com.service.LoginService;
 import com.todo.Todo;
 import com.todo.TodoService;
 
-@WebServlet(urlPatterns = "/todo.do")
+@WebServlet(urlPatterns = "/add-todo.do")
  
 
-public class TodoServlet extends HttpServlet {
+public class AddTodoServlet extends HttpServlet {
 	
 	private LoginService service = new LoginService();
 	private TodoService todoService = new TodoService();
 
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws IOException, ServletException {
-		request.setAttribute("todos", todoService.retrieveTodos());
-		request.getRequestDispatcher("/WEB-INF/views/todo.jsp").forward(request, response);
-	}
+	
+	
+	
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
